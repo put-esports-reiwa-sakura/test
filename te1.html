@@ -2,9 +2,15 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>Googleフォーム送信後の編集リンク取得</title>
+    <title></title>
 </head>
 <body>
+    <div class="maincon">
+        <label for="a1"><p>項目1</p></label>
+        <input type="text" id="a1">
+        <label for="a2"><p>項目2</p></label>
+        <input type="text" id="a2">
+    </div>
     <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfrWu0DcapdWY16l0FO8D_OOyahc4dvlXU4ywPNfdQnboB66w/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
         <input type="text" name="entry.1757499198" required>
         <button type="submit">送信</button>
