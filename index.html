@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サーバー一時停止中</title>
+    <script src="newdateofexpiry.js"></script>
+    <script>
+        function localkeyNotMove(st,stDa,sD){
+            const a1=`
+body {
+    background: linear-gradient(135deg, #a8edea, #fed6e3);
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+.title {
+    font-size: 4rem;
+    color: #64b5f6;
+    margin: 0;
+    animation: float 3s infinite ease-in-out;
+}
+.subtitle {
+    font-size: 1.5rem;
+    color: #333;
+}
+.calm-style {
+    font-size: 2cap;
+    font-weight: bold;
+    color: #9bd988;
+}
+.cloud-icon {
+    font-size: 6rem;
+    color: #64b5f6;
+    margin: 20px 0;
+    animation: drift 4s infinite ease-in-out;
+}
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+@keyframes drift {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-20px);
+    }
+}
+            `;
+            const a2=`
+<div class="container">
+    <div class="cloud-icon">☁️</div>
+    <h1 class="title">503 Service Unavailable</h1>
+    <h2 class="calm-style">現在サービス利用不可</h2>
+    <p class="subtitle">改装工事中...</p>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const calmColor = "#666";
+        const letters = document.querySelectorAll('.calm-style span');
+
+        setInterval(() => {
+            letters.forEach((letter) => {
+                letter.style.color = calmColor;
+            });
+        }, 1000);
+    });
+<\/script>
+            `;
+            document.querySelector("style").innerHTML=a1;
+            document.body.innerHTML = a2;
+        }
+    </script>
+    <style></style>
+</head>
+<body></body>
+</html>
